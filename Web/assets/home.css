@@ -123,33 +123,34 @@ nav li:hover::before{
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   animation-fill-mode: forwards;
+  animation-delay: 500ms;
 }
 .card:nth-child(2){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 400ms;
-   animation-delay: 400ms;
+   animation-delay: 800ms;
    animation-fill-mode: forwards;
 }
 .card:nth-child(3){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 800ms;
-   animation-delay: 800ms;
+   animation-delay: 1200ms;
    animation-fill-mode: forwards;
 }
 
-.card h2{
+.title{ /*GENERAL*/
   margin:0;
   padding:0;
-  font-size: 40px;
+  font-size: 35px;
   font-weight:bold;
 }
 
-.card p{
+.sub-title{ /*GENERAL*/
   font-size:25px;
   font-weight:400;
-  margin:10px 0;
+  margin:5px 0;
   color:#272727;
 }
 .card-icon{
@@ -179,8 +180,70 @@ nav li:hover::before{
 .section2{
   height:100vh;
   width: 100%;
+  min-height:800px;
 }
 
+.section2 hr{
+  width:55%;
+  border: 1px solid #B61C16;
+}
+
+.section2-titles{
+  text-align: center;
+  margin: 0 0 100px 0;
+  display: block;
+}
+
+.section2-titles h1{
+  margin: 20px 0 6px 0;
+  font-size: 40px;
+}
+
+#illustrations{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+}
+.ilus-card{
+  width:20%;
+  max-width:260px;
+  background-color: #EAEAEA;
+  border:3px solid #C9C9C9;
+  border-radius:18px;
+  text-align: center;
+  padding:20px 12px 12px 12px;
+}
+
+.ilus-card img{
+  height:150px;
+}
+
+/* GENERAL */
+.content{
+  font-size:18px;
+  color: #272727;
+
+}
+
+.text-lg{
+  text-align:center;
+  font-size: 28px;
+  margin:0;
+}
+
+
+
+
+@media only screen and (min-width: 1400px){
+  #illustrations{
+    justify-content: center;
+  }
+
+  .ilus-card{
+    margin: 0 20px;
+  }
+}
+/* animations */
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;
