@@ -233,7 +233,7 @@ hr{
   padding:20px 12px 12px 12px;
 }
 
-.ilus-card img{
+.ilus-card img, .ilus-card svg{
   height:20%;
   min-height:150px;
 
