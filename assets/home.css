@@ -126,7 +126,7 @@ nav li:hover::before{
   display: flex;
   justify-content: space-around;
   position: relative;
-  top:40px;
+  top:10vh;
   height: 40vh;
   min-height: 278px;
   padding:1%;
@@ -143,7 +143,7 @@ nav li:hover::before{
 .title{ /*GENERAL*/
   margin:0;
   padding:0;
-  font-size: 35px;
+  font-size: 26px;
   font-weight:bold;
 }
 
@@ -156,12 +156,18 @@ nav li:hover::before{
 }
 
 .content-lg{ /*GENERAL*/
-  font-size:25px;
-  font-weight:400;
-  color:#272727;
+  font-size:22px;
+  margin: 0;
 }
 
-.card .content-lg{
+.content-md{ /*GENERAL*/
+  font-size: 20px;
+  font-weight:400;
+  color:#272727;
+  margin:12px 0 0 0;
+}
+
+.card .content-md{
   margin:0
 }
 
@@ -197,9 +203,7 @@ nav li:hover::before{
   height:100vh;
   width: 100%;
   min-height:680px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-around;
+  position:relative;
 }
 
 hr{
@@ -209,39 +213,60 @@ hr{
 
 .section2-titles{
   text-align: center;
-  display: block;
+  height: 20%;
+  vertical-align: middle;
+  padding-top:5vh;
 }
 
 .section2-titles h1{
   margin: 20px 0 6px 0;
-  font-size: 40px;
+  font-size: 70px;
+}
+
+.flex-container{
+  height:80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 #illustrations{
   display: flex;
   flex-direction: row;
-  justify-content:space-around;
-  height:319px;
+  justify-content:center;
+  height:320px;
+  flex-shrink:2;
 }
-.ilus-card{
-  width:20%;
-  max-width:260px;
-  background-color: #EAEAEA;
-  border:3px solid #C9C9C9;
-  border-radius:18px;
-  text-align: center;
-  padding:20px 12px 12px 12px;
+#illustrations svg{
+  margin-bottom:20px;
 }
 
+.ilus-card{
+  width:20%;
+  height:auto;
+  max-width:260px;
+  border:2px solid #f1ecec;
+  border-radius:7px;
+  text-align: center;
+  padding:20px 12px 0px 12px;
+  margin: 0 20px;
+  box-sizing: border-box;
+  -webkit-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.ilus-card:hover{
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.1);
+  -webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
+  box-shadow: 2px 2px 6px 2px rgba(0,0,0,.1);
+}
 .ilus-card img, .ilus-card svg{
   height:20%;
   min-height:150px;
-
 }
 
-#section2 .text-lg{
-  margin:0;
-}
 
 .red{
   color:#B61C16;
@@ -250,19 +275,21 @@ hr{
 .text-lg{ /*GENERAL*/
   text-align:center;
   font-size: 28px;
-  margin:80px 0 20px 0;
+  margin:0;
+  font-weight: normal;
+  color:#272727;
 }
 
 
 
 
-@media only screen and (min-width: 1400px){
+@media only screen and (max-width: 1400px){
   #illustrations{
     justify-content: center;
   }
 
   .ilus-card{
-    margin: 0 50px;
+    margin: 0 10px;
   }
 }
 
