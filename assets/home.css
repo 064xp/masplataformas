@@ -1,10 +1,3 @@
-/* todo
-  make responsive navbar
-  fix flex sizes (shrink and grow)
-  make responsive
-
- */
-
 body, html{
   margin:0;
   font-family: 'Source Sans Pro', sans-serif;
@@ -75,9 +68,64 @@ nav li:hover::before{
   margin: 5px 0 0 35px;
 }
 
+#nav__hamburger{
+  height:100%;
+  cursor:pointer;
+  float:right;
+  -webkit-transition: transform 250ms ease-out;
+  -o-transition: transform 250ms ease-out;
+  transition: transform 250ms ease-out;
+  position:relative;
+  display: none;
+}
+#nav__hamburger--x{
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: opacity 250ms ease-in-out;
+  -o-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+}
+
+#nav__hamburger--bars{
+  position: absolute;
+  -webkit-transition: opacity 250ms ease-in-out;
+  -o-transition: opacity 250ms ease-in-out;
+  transition: opacity 250ms ease-in-out;
+}
+
+.visible{
+  opacity:1!important;
+}
+.invisible{
+  opacity:0!important;
+}
+
+/* media query for navbar */
+
+@media only screen and (max-width: 1000px){
+  #nav__hamburger{
+    display: block;
+    right:20%;
+  }
+  nav li{
+    float: none;
+    text-align: right;
+  }
+  nav li:hover::before{
+    width:0;
+  }
+  nav ul{
+    position:absolute;
+    right:0;
+    top:0;
+    background: #ccc;
+    margin:0;
+  }
+}
+
 #masplataformas-text{
-  width:40%;
-  min-width:600px;
+  width:85%;
+  max-width:700px;
   display: block;
   margin:50px auto 0 auto;
 }
@@ -155,6 +203,7 @@ nav li:hover::before{
   margin:3% 0 0 0;
 }
 
+
 .content-lg{ /*GENERAL*/
   font-size:22px;
   margin: 0;
@@ -176,6 +225,11 @@ nav li:hover::before{
   /* max-height:120px; */
 
   margin:0;
+}
+
+/*  media queries for section1 */
+@media only screen and (max-width: 920px){
+
 }
 
 .card:nth-child(1){
@@ -214,8 +268,9 @@ hr{
 .section2-titles{
   text-align: center;
   height: 20%;
-  vertical-align: middle;
-  padding-top:5vh;
+  box-sizing: border-box;
+  padding:2vh 20px 0 20px;
+  margin:0 0 5em 0;
 }
 
 .section2-titles h1{
@@ -226,7 +281,7 @@ hr{
 .flex-container{
   height:80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
 }
 
@@ -234,7 +289,7 @@ hr{
   display: flex;
   flex-direction: row;
   justify-content:center;
-  height:320px;
+  height:auto;
   flex-shrink:2;
 }
 #illustrations svg{
@@ -242,8 +297,6 @@ hr{
 }
 
 .ilus-card{
-  width:20%;
-  height:auto;
   max-width:260px;
   border:2px solid #f1ecec;
   border-radius:7px;
@@ -251,20 +304,78 @@ hr{
   padding:20px 12px 0px 12px;
   margin: 0 20px;
   box-sizing: border-box;
-  -webkit-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
 }
-.ilus-card:hover{
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.1);
-  -webkit-box-shadow: 2px 2px 2px 2px rgba(0,0,0,.3);
-  box-shadow: 2px 2px 6px 2px rgba(0,0,0,.1);
-}
+
 .ilus-card img, .ilus-card svg{
   height:20%;
   min-height:150px;
+}
+
+
+@media only screen and (max-width: 1090px){
+
+  .section2{
+    height:auto;
+  }
+
+  .flex-container{
+    height:auto;
+  }
+  #illustrations{
+    justify-content: center;
+    flex-wrap:wrap;
+    height:auto;
+    margin-top:50px;
+  }
+
+  .ilus-card{
+    margin: 0 auto 30px auto;
+    height:350px;
+  }
+  .section2-titles{
+    margin:0;
+    height:auto;
+  }
+  .section2-titles h1{
+    font-size: 3em;
+  }
+
+  .section2-titles .text-lg{
+    font-size: 1.5em;
+  }
+
+  hr{
+    width:80%;
+  }
+
+  .flex-container .text-lg{
+    margin:2em 0;
+  }
+}
+
+@media only screen and (max-width: 700px){
+  .ilus-card{
+  max-width: none;
+  width:85vw;
+    height:200px;
+    display: flex;
+
+  }
+
+  .ilus-card svg{
+    flex-basis: 120%;
+  }
+
+  /* .even{
+    float:left!important;
+  }
+
+  .ilus-card-text{
+    width:50%;
+    float:right;
+  } */
+
+
 }
 
 
@@ -280,16 +391,52 @@ hr{
   color:#272727;
 }
 
+footer{
+  background: #0C0C0C;
+  color: #878787;
+  display: flex;
+  justify-content: space-between;
+  height:auto;
+  box-sizing: border-box;
+  padding:10px 20px 10px 20px;
+}
+footer h2, p{
+  margin:0;
+}
+.footer-all-rights{
+  align-self: flex-end;
+}
+.footer-contact{
+  text-align: center;
+  align-self: flex-end;
+}
 
+footer svg{
+  height:100px;
+}
 
+footer svg:hover path{
+  fill:#939393;
+}
 
-@media only screen and (max-width: 1400px){
-  #illustrations{
-    justify-content: center;
+@media only screen and (max-width: 750px){
+  footer{
+    flex-direction: column;
   }
-
-  .ilus-card{
-    margin: 0 10px;
+  footer svg{
+    order: 1;
+  }
+  .footer-all-rights{
+    align-self: center;
+    order: 3;
+  }
+  .footer-contact{
+    align-self: center;
+    order: 2;
+    border-top:1px solid #878787;
+    border-bottom:1px solid #878787;
+    padding:0 0 20px 0;
+    margin:20px 0;
   }
 }
 
