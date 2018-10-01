@@ -35,6 +35,7 @@ nav{
 nav ul{
   list-style:none;
   display: inline-block;
+  float:right;
   font-size:25px;
   margin-right:50px;
 }
@@ -108,6 +109,12 @@ nav li:hover::before{
 /* media query for navbar */
 
 @media only screen and (max-width: 1000px){
+  #nav-icon{
+  height:10vw;
+  margin: 13px 0 0 15px;
+  max-height: 70px;
+}
+  
   #nav__hamburger{
     display: block;
   }
@@ -210,9 +217,11 @@ nav li:hover::before{
   
   .ver-renta{
     width:60vw;
-    font-size: 20px;
+     font-size: 25px;
   }
+  
 }
+
 
 .ver-renta:hover{
   background-color: #6B0300;
@@ -234,6 +243,28 @@ nav li:hover::before{
   height: 80%;
   min-height: 270px;
   opacity: 0;
+}
+
+/*media query for main section cards*/
+
+@media only screen and (max-width:700px){
+  .cards{
+    flex-direction:column;
+    height:auto;
+    align-self:center;
+    top:-15px;
+  }
+  
+  .card-icon{
+    max-height: 120px;
+  }
+  
+  .card{
+    width:auto;
+  }
+  #section1{
+    height:auto;
+  }
 }
 
 .title{ /*GENERAL*/
