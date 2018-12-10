@@ -63,7 +63,6 @@ header h1{
   margin:12px 0 0 0;
 }
 
-
 /* --- Nav bar styles --- */
 nav{
   height:80px;
@@ -365,7 +364,6 @@ footer svg:hover path{
   width:400px;
   height: 80%;
   min-height: 270px;
-  opacity: 0;
 }
 
 /*media query for main section cards*/
@@ -410,21 +408,24 @@ footer svg:hover path{
   margin:0;
 }
 
+.animated-card{
+  opacity: 0; 
+}
 
-.main-card:nth-child(1){
+.animated-card:nth-child(1){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   animation-fill-mode: forwards;
   animation-delay: 500ms;
 }
-.main-card:nth-child(2){
+.animated-card:nth-child(2){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 400ms;
    animation-delay: 800ms;
    animation-fill-mode: forwards;
 }
-.main-card:nth-child(3){
+.animated-card:nth-child(3){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 800ms;
@@ -578,3 +579,11 @@ footer svg:hover path{
   }
 }
 /* === end of home page styles === */
+
+/* ===contact page styles === */
+
+#contact-header{
+  background-image: url("/assets/img/contactheader.jpg");
+  background-position: center;
+  background-size: cover;
+}
