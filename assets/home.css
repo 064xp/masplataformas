@@ -104,6 +104,10 @@ nav li:hover::before{
   width:100%;
 }
 
+.active-page::before{
+  width:100%;
+}
+
 #nav-icon{
   height:70px;
   margin: 5px 0 0 35px;
@@ -409,7 +413,7 @@ footer svg:hover path{
 }
 
 .animated-card{
-  opacity: 0; 
+  opacity: 0;
 }
 
 .animated-card:nth-child(1){
@@ -583,7 +587,69 @@ footer svg:hover path{
 /* ===contact page styles === */
 
 #contact-header{
-  background-image: url("/assets/img/contactheader.jpg");
-  background-position: center;
+  background-image: url("/assets/img/contact-header-md.jpg");
+  background-position: 60%;
   background-size: cover;
+}
+
+.contact-cards{
+  position: static;
+  padding: 3em 0 0 0;
+}
+
+.block-separator{
+  height:200px;
+  width:100%;
+  background: #950602;
+  color: white;
+  text-align: center;
+  padding: 1em .5em 1em .5em;
+  box-sizing: border-box;
+}
+
+.block-separator h1{
+  font-weight: normal;
+  font-size: 4em;
+  margin: 0;
+}
+
+.block-separator h3
+{
+  font-weight: lighter;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Contact page media query */
+
+@media only screen and (max-width: 700px){
+  .contact-cards{
+    padding:20% 5% 0 5%;
+  }
+
+  .block-separator{
+    height:auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .block-separator h1{
+    font-size: 3.4em;
+  }
+
+  .block-separator h3{
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .block-separator h1{
+    font-size: 2.8em;
+  }
+
+  .block-separator h3{
+    font-size: 1.3em;
+    margin: 10px 0 0 0;
+  }
 }
