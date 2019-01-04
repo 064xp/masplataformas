@@ -587,7 +587,7 @@ footer svg:hover path{
 /* ===contact page styles === */
 
 #contact-header{
-  background-image: url("/assets/img/contact-header-md.jpg");
+  background-image: url("img/contact-header-md.jpg");
   background-position: 60%;
   background-size: cover;
 }
