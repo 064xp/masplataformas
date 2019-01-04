@@ -63,7 +63,6 @@ header h1{
   margin:12px 0 0 0;
 }
 
-
 /* --- Nav bar styles --- */
 nav{
   height:80px;
@@ -102,6 +101,10 @@ nav li::before{
 }
 
 nav li:hover::before{
+  width:100%;
+}
+
+.active-page::before{
   width:100%;
 }
 
@@ -365,7 +368,6 @@ footer svg:hover path{
   width:400px;
   height: 80%;
   min-height: 270px;
-  opacity: 0;
 }
 
 /*media query for main section cards*/
@@ -410,21 +412,24 @@ footer svg:hover path{
   margin:0;
 }
 
+.animated-card{
+  opacity: 0;
+}
 
-.main-card:nth-child(1){
+.animated-card:nth-child(1){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   animation-fill-mode: forwards;
   animation-delay: 500ms;
 }
-.main-card:nth-child(2){
+.animated-card:nth-child(2){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 400ms;
    animation-delay: 800ms;
    animation-fill-mode: forwards;
 }
-.main-card:nth-child(3){
+.animated-card:nth-child(3){
   -webkit-animation: fadeInUp 800ms ease-out;
   animation: fadeInUp 800ms ease-out;
   -webkit-animation-delay: 800ms;
@@ -578,3 +583,73 @@ footer svg:hover path{
   }
 }
 /* === end of home page styles === */
+
+/* ===contact page styles === */
+
+#contact-header{
+  background-image: url("/assets/img/contact-header-md.jpg");
+  background-position: 60%;
+  background-size: cover;
+}
+
+.contact-cards{
+  position: static;
+  padding: 3em 0 0 0;
+}
+
+.block-separator{
+  height:200px;
+  width:100%;
+  background: #950602;
+  color: white;
+  text-align: center;
+  padding: 1em .5em 1em .5em;
+  box-sizing: border-box;
+}
+
+.block-separator h1{
+  font-weight: normal;
+  font-size: 4em;
+  margin: 0;
+}
+
+.block-separator h3
+{
+  font-weight: lighter;
+  font-size: 1.8em;
+  margin: 0;
+}
+
+/* Contact page media query */
+
+@media only screen and (max-width: 700px){
+  .contact-cards{
+    padding:20% 5% 0 5%;
+  }
+
+  .block-separator{
+    height:auto;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .block-separator h1{
+    font-size: 3.4em;
+  }
+
+  .block-separator h3{
+    font-size: 1.5em;
+    margin: 10px 0 20px 0;
+  }
+}
+
+@media only screen and (max-width: 480px){
+  .block-separator h1{
+    font-size: 2.8em;
+  }
+
+  .block-separator h3{
+    font-size: 1.3em;
+    margin: 10px 0 0 0;
+  }
+}
