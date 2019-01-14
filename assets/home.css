@@ -154,6 +154,10 @@ nav li:hover::before{
 /* media query for header */
 
 @media only screen and (max-width: 1000px){
+  #nav-index{
+    order: 1;
+}
+
   header h1{
     font-size: 3em;
     top:-20%;
@@ -176,12 +180,16 @@ nav li:hover::before{
     box-sizing: border-box;
     margin:0;
   }
-  nav li:nth-child(2){
+  nav li:nth-child(2n){
     border-top:2px solid #333;
     border-bottom:2px solid #333;
   }
   nav li:hover::before{
     width:0;
+  }
+
+  .active-page::before{
+    width: 0;
   }
   nav ul{
     position: absolute;
@@ -271,7 +279,7 @@ footer svg:hover path{
   box-sizing: border-box;
 }
 
-#home-header{
+#home-header{assets
   min-height:430px;
   height:60vh;
   background-position: center -120px;
@@ -652,4 +660,167 @@ footer svg:hover path{
     font-size: 1.3em;
     margin: 10px 0 0 0;
   }
+}
+
+/* === end of contact page styles === */
+
+/* === Renta page styles === */
+
+#rentas-header{
+  background-image: url("img/rentas-header-md.jpg");
+  background-size: cover;
+  background-position: 40%;
+}
+
+#renta-main h1{
+  margin:20px 0 20px 15px;
+  font-weight: lighter;
+  font-size: 2.3em;
+}
+
+.picture-cards-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 10vh 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  margin: 0 0 40px 0;
+  padding: 0;
+}
+
+.picture-card{
+  height: auto;
+  width:300px;
+  border: 2px solid #e7e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 20px;
+}
+
+.picture-card-picture{
+  height:29vh;
+  width:100%;
+  min-height:185px;
+  background-image: url("img/placeholder.jpg");
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+
+}
+#image_GS2632{
+  background-image: url("img/GS2632.jpg");
+  background-position: bottom;
+}
+
+#image_E400A{
+  background-image: url("img/E400AJN.jpg");
+}
+
+#image_Z45{
+  background-image: url("img/Z45.jpg");
+}
+
+.table-container{
+  margin:10px 0 2px 0;
+}
+
+.table-row{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-size: 1.3em;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 3px 0;
+}
+
+.table-div_title{
+  font-weight: lighter;
+  height:30px;
+  margin: 0;
+}
+
+.table-div_content{
+  font-weight: 400;
+  height:30px;
+  margin: 0;
+}
+
+.info-sm{
+  font-weight: 350;
+  text-align: center;
+  margin:0;
+}
+
+.picture-card-dropdown-title{
+  padding: 0 12px;
+  cursor: pointer;
+}
+
+.picture-card-dropdown-title svg{
+  height: 1em;
+  width: 1em;
+  display: inline;
+  vertical-align: sub;
+  color: currentColor;
+}
+
+.widget-input-container{
+  width: 95%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+.widget-input{
+  width: 60px;
+  background: none;
+  box-sizing: border-box;
+  margin: 0 5px 0 5px;
+  border: 1px solid rgb(34, 34, 34);
+  border-radius: 4px;
+  color: #0b0b0b;
+  text-align: center;
+}
+
+.widget-submit{
+  width: 30px;
+  border: none;
+  background: none;
+  padding: 0;
+}
+
+.widget-submit svg{
+  fill: #B61C16;
+  height: 100%;
+}
+
+.widget-output{
+  height: auto;
+  width: 94%;
+  background:rgb(170, 170, 170);
+  display: flex;
+  margin: 10px auto 20px auto;
+  border-radius: 5px;
+}
+
+.widget-output-period-info{
+  width: 65%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.widget-output-cost-info{
+  font-size: 25px;
+  font-weight: 600;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+.hidden{
+  display: none;
 }
