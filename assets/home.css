@@ -104,6 +104,10 @@ nav li:hover::before{
   width:100%;
 }
 
+.active-page{
+  color:white;
+}
+
 .active-page::before{
   width:100%;
 }
@@ -154,16 +158,12 @@ nav li:hover::before{
 /* media query for header */
 
 @media only screen and (max-width: 1000px){
-  #nav-index{
-    order: 1;
-}
-
   header h1{
     font-size: 3em;
     top:-20%;
   }
   #nav-icon{
-  height:10vw;
+  height:70%;
   margin: 13px 0 0 15px;
   max-height: 70px;
 }
@@ -180,17 +180,17 @@ nav li:hover::before{
     box-sizing: border-box;
     margin:0;
   }
-  nav li:nth-child(2n){
-    border-top:2px solid #333;
-    border-bottom:2px solid #333;
-  }
   nav li:hover::before{
     width:0;
   }
 
+  .active-page{
+    background: #323030;
+}
   .active-page::before{
     width: 0;
   }
+
   nav ul{
     position: absolute;
     width:100vw;
@@ -279,7 +279,7 @@ footer svg:hover path{
   box-sizing: border-box;
 }
 
-#home-header{assets
+#home-header{
   min-height:430px;
   height:60vh;
   background-position: center -120px;
@@ -313,6 +313,7 @@ footer svg:hover path{
   margin: 0 20px;
   font-size:35px;
   font-weight: normal;
+  display: flex;
 }
 
 .plus_subhead h4::before{
@@ -332,7 +333,7 @@ footer svg:hover path{
   background-color:#B61C16;
   border:none;
   display: block;
-  margin:2% auto 0 auto;
+  margin:15px auto;
 
   -webkit-transition: 250ms background ease-in-out;
   -o-transition: 250ms background ease-in-out;
@@ -342,8 +343,13 @@ footer svg:hover path{
 /*Media query for subhead and button*/
 
 @media only screen and (max-width:490px){
+  #home-header{
+    min-height: 332px;
+    height:57vh;
+  }
   .plus_subhead h4{
     font-size: 25px;
+    margin: 0 10px;
   }
   .plus_subhead h4::before{
   height:16px;
@@ -354,7 +360,6 @@ footer svg:hover path{
     width:60vw;
      font-size: 25px;
   }
-
 }
 
 .ver-renta-buton:hover{
@@ -368,7 +373,7 @@ footer svg:hover path{
   top:10vh;
   height: 40vh;
   min-height: 278px;
-  padding:1%;
+  padding:1% 15px;
   box-sizing: border-box;
 }
 .main-card{
@@ -385,7 +390,6 @@ footer svg:hover path{
     -webkit-clip-path: none;
     -o-clip-path: none;
     clip-path: none;
-    height:auto;
     margin-bottom: 50px;
   }
   .main-cards-container{
@@ -695,6 +699,7 @@ footer svg:hover path{
   border-radius: 6px;
   overflow: hidden;
   margin: 20px;
+  padding-bottom:15px;
 }
 
 .picture-card-picture{
@@ -705,7 +710,6 @@ footer svg:hover path{
   background-size: cover;
   background-position: center;
   box-sizing: border-box;
-
 }
 #image_GS2632{
   background-image: url("img/GS2632.jpg");
